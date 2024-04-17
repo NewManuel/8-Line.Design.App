@@ -1,40 +1,44 @@
-# 10 Object-oriented Programming: SVG Logo Maker
+# Line Design App (SVG Logo Maker)
 
-## Your Task
+## PURPOSE
 
-Your task is to build a Node.js command-line application that takes in user input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a `.svg` file.
+```bash
+If you ever wanted to create your own brand no need to continue any further. This application help to create a logo for those who lack the artisic ability to create one themselves, using simpple shapes and colors.
 
-Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and passes all of the tests. You’ll need to submit a link to the video **and** add it to the README of your project.
+A Node.js command-line application is built to take in a users input to generate a logo and save it as an [SVG file](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a `.svg` file.
+This application uses [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4) for collecting input from the user. 
+```
 
-Refer to the [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) on the Full-Stack Blog for additional guidance on creating a video.
-
-> **Note**: There is no starter code for this assignment.
-### User Story
+## User Story
 
 ```md
-AS a freelance web developer
-I WANT to generate a simple logo for my projects
-SO THAT I don't have to pay a graphic designer
+For a freelance web developer
+YOU want a simple logo to be generated for YOUR projects
+SO THAT YOU don't have to pay a graphic designer or waste time doing it yourself
 ```
 
 ## Acceptance Criteria
 
 ```md
 GIVEN a command-line application that accepts user input
-WHEN I am prompted for text
-THEN I can enter up to three characters
-WHEN I am prompted for the text color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I am prompted for a shape
-THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-WHEN I am prompted for the shape's color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I have entered input for all the prompts
+WHEN YOU are prompted for a text
+THEN YOU can enter up to three characters
+WHEN YOU are prompted for the text color
+THEN YOU can enter a color keyword (OR a hexadecimal number)
+WHEN YOU are prompted for a shape
+THEN YOU are presented with a list of shapes to choose from: circle, triangle, and square
+WHEN YOU am prompted for the shape's color
+THEN YOU can enter a color keyword (OR a hexadecimal number)
+WHEN YOU have entered the input for all the prompts
 THEN an SVG file is created named `logo.svg`
 AND the output text "Generated logo.svg" is printed in the command line
-WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+WHEN YOU open the `logo.svg` file in a browser
+THEN YOU are shown a 300x200 pixel image that matches the criteria YOU entered
 ```
+
+### Video
+
+* Link: https://drive.google.com/file/d/1svGVvwr4cZn9BZ__YibJgEOPWP7s7qeW/view?usp=sharing
 
 ### Gif
 
@@ -42,30 +46,6 @@ The following image shows a produced logo of the generated SVG given the followi
 
 ![Image showing a blue circle with white text that reads "E.O.N.".](./Images/Image%20Preview.png)
 
-## Additional Requirements
+### Url
 
-This Challenge combines many of the skills covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help you get started.
-
-Because this Challenge requires a video submission, refer to the [Full-Stack Blog video submission guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for guidance on creating and sharing a video.
-
-Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4) for collecting input from the user. The application will be invoked by using the following command:
-
-```bash
-node index.js
-```
-
-It is recommended that you start with a directory structure that looks like the following example:
-
-```md
-.  
-├── examples/           // Example svg file(s) created with the app
-├── lib/                // Folder for classes or functions
-    ├── shapes.js       // Exports `Triangle`, `Circle`, and `Square` classes
-    ├── shapes.test.js  // Jest tests for shapes
-    └── more...         // Additional files and tests
-├── .gitignore          // Indicates which folders and files Git should ignore
-├── index.js            // Runs the application using imports from lib/
-├── package.json
-└── README.md           // App description, link to video, setup and usage instructions           
-```
-
+* The URL of the GitHub repository: https://github.com/NewManuel/8-Line.Design.App
