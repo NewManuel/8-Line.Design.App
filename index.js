@@ -65,3 +65,5 @@ function fileCreate(fileName, answers) {
         err ? console.log(err) : console.log("Generated logo.svg");
     });
 };
+
+intialize();
