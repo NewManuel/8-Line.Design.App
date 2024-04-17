@@ -1,6 +1,11 @@
+// Importing Dependencies
+// These file imports necessary modules such as inquirer for user prompts, fs for file system operations, and the shape classes(Triangle, Circle, Square) from a local file(./lib/shapes).
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { Triangle, Circle, Square } = require("./lib/shapes");
+
+// Prompting User for Design Details
+// This defines an array of questions(designQnA) using Inquirer.js.These questions ask the user about the shape, color, text, and text color they want for their logo.
 const designQnA = [
     {
         type: "list",
@@ -25,14 +30,8 @@ const designQnA = [
     },
 ];
 
-function intialize() {
-    inquirer.prompt(designQnA).then((answers) => {
-        console.log(answers);
-        const inputShape = answers;
-        fileCreate("./distro/logo.svg", inputShape);
-    });
-};
-
+// Logo File Creation Function
+// The fileCreate function takes a file name and user answers as parameters. It generates an SVG string based on the user's choices for shape, color, text, and text color. Depending on the selected shape(Triangle, Square, Circle), it instantiates the corresponding shape class and adds the SVG elements for the shape to the SVG string. It also adds SVG text elements for the specified text, using the provided text color. After constructing the SVG string, it writes the string to a file using fs.writeFile.
 function fileCreate(fileName, answers) {
     let svgString = "";
     svgString =
@@ -66,4 +65,15 @@ function fileCreate(fileName, answers) {
     });
 };
 
+// Initialization Function
+// This initialize the function and uses inquirer.prompt to ask the questions defined earlier. Upon receiving answers from the user, it logs the answers and proceeds to create the logo file.
+function intialize() {
+    inquirer.prompt(designQnA).then((answers) => {
+        console.log(answers);
+        const inputShape = answers;
+        fileCreate("./distro/logo.svg", inputShape);
+    });
+};
+
+// This initialize the function and is called to start the application, prompting the user for design details and creating the logo file accordingly.
 intialize();
